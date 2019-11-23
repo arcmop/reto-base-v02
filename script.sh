@@ -23,11 +23,11 @@ cd ..
 docker-compose down --remove-orphans
 docker-compose up -d
 
-#Monitoring
-sleep 10
-docker-compose ps
-
 #Test
+sleep 10
 wget -q -O - http://192.168.99.100:3081/retoibm/sumar/80/300
+
+#Monitoring
+docker-compose ps
 
 echo "Proceso Completo"
